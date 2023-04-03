@@ -98,7 +98,7 @@ class Ui_MainWindow(object):
 
     def NormalChanged(self, date):
         rdelta = relativedelta(datetime.now().date(), date.toPyDate())
-        if (rdelta.years<=0):
+        if (rdelta.years<0):
             self.normal_result.setText("Bạn chưa sinh ra")
         else:
             self.normal_result.setText(str(rdelta.years))
